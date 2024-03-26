@@ -22,6 +22,9 @@ public class Sale {
 
     private LocalDateTime date;
 
+    @Column(name = "mode_sale")
+    private String modeSale;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Product> products;
 
