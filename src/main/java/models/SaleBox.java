@@ -16,20 +16,21 @@ import java.time.LocalDateTime;
 public class SaleBox {
 
     @Id
+    @Column(name = "DATE_SALE_BOX")
     private LocalDateTime date;
 
     @Id
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_seller", referencedColumnName = "id_seller")
+    @JoinColumn(name = "ID_SELLER", referencedColumnName = "ID_SELLER")
     private Seller idSeller;
 
-    @Column(name = "total_sales")
+    @Column(name = "TOTAL_SALES")
     private Long totalSales;
 
-    @Column(name = "total_expense")
+    @Column(name = "TOTAL_EXPENSE")
     private Long totalExpense;
 
-    @Column(name = "total_day_by_seller")
+    @Column(name = "TOTAL_DAY_BY_SELLER")
     private Long totalDayBySeller;
 
 }
