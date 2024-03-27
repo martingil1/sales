@@ -16,13 +16,14 @@ import java.util.List;
 public class Sale {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_sale")
+    @Column(name = "ID_SALE")
     @Id
     private Long idSale;
 
+    @Column(name = "DATE_SALE")
     private LocalDateTime date;
 
-    @Column(name = "mode_sale")
+    @Column(name = "MODE_SALE")
     private String modeSale;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

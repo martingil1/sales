@@ -16,17 +16,20 @@ import java.util.List;
 public class Seller {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_seller")
+    @Column(name = "ID_SELLER")
     @Id
     private Long idSeller;
 
+    @Column(name = "NAME_SELLER")
     private String name;
 
     private String pass;
 
-    private LocalDateTime entry;
+    @Column(name = "ENTRY_HOUR")
+    private LocalDateTime entryHour;
 
-    private LocalDateTime exit;
+    @Column(name = "EXIT_HOUR")
+    private LocalDateTime exitHour;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Sale> sales;

@@ -14,10 +14,11 @@ import lombok.NoArgsConstructor;
 public class Product {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_product")
+    @Column(name = "ID_PRODUCT")
     @Id
     private Long idProduct;
 
+    @Column(name = "NAME_PRODUCT")
     private String name;
 
     private Long price;
